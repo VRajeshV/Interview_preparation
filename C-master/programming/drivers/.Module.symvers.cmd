@@ -1,0 +1,1 @@
+cmd_/home/pavan/C/programming/drivers/Module.symvers := sed 's/\.ko$$/\.o/' /home/pavan/C/programming/drivers/modules.order | scripts/mod/modpost -m -a  -o /home/pavan/C/programming/drivers/Module.symvers -e -i Module.symvers   -T -

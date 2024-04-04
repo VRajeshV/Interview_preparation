@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+long substrCount(int n, char* s) {
+
+    long count = 0, i, j;
+    
+    count = n;
+    for(i = 0; i < n; i++)
+    {
+        for(j = i + 1; j < n; j++)
+        {
+            //first condition
+            if(s[i] == s[j])
+                count++;
+            else {
+                if( ((j + 1) < n) && (s[i] == s[j + 1]))
+		{
+                    count++;
+		    j++;
+		}
+                // else {
+                //     break;
+                // }
+            }
+            
+        }
+           
+    }
+    return count;
+}
+
+int main()
+{
+	printf("%ld\n", substrCount(5, "asasd"));
+	return 0;
+}

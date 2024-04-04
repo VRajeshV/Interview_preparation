@@ -1,0 +1,1 @@
+cmd_/home/pavan/C/programming/drivers/hello_world.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/pavan/C/programming/drivers/hello_world.ko /home/pavan/C/programming/drivers/hello_world.o /home/pavan/C/programming/drivers/hello_world.mod.o;  true

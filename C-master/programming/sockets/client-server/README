@@ -1,0 +1,40 @@
+design:
+after unzipping, this folder consists of:
+
+-> src folder
+   -> server.c - server app
+   -> support_funcs.c - functions to support server app
+   -> client.c - client app
+
+-> inc folder
+   -> comm_header.h - have headers for source files in src folder
+
+-> server app creates socket and will listen on port 54321
+-> each client accepted by server run independantly as seperate process
+-> client app creates socket and will connect to server on loop back address
+       with port 54321
+
+server supports 4 commands
+1.pwd -> to get present working directory of server
+2.ls -> to get the list of contents of directory where server running
+3.cd <dir> -> to instruct the server to enter into a directory
+4.bye -> to exit the session
+
+Build instructions:
+
+1. untar and go to pavan.bobba folder.
+2. Run "make"
+3. it will create binaries server and client
+4. make sure server binary started execution before client
+
+assumptions:
+
+-> This code build and tested successfully on ubuntu with gcc version 5.4
+
+limitations:
+
+    -> server response will come upto 10k bytes only
+    -> if commands entered by the client consist more characters
+       than the command, server won't check validation
+       Eg: ls and lss also will give same output
+    -> maximum number of clients connected at a time is 10
