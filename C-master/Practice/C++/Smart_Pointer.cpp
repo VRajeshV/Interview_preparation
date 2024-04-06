@@ -26,7 +26,10 @@ class Addition
 int main()
 {
     //     unique Pointer
-    //int a = 1, b=2;
+
+    // Here we are showing the unique_pointer is pointing to P1.
+    // But, then we remove P1 and assign P2 so the pointer now points to P2.
+    
     unique_ptr<Addition> P1(new Addition(1,3));
     cout<< P1->result()<<endl;
 
@@ -38,6 +41,8 @@ int main()
     //cout<<P1->result()<<endl;
 
     //   shared Pointer
+    //Here both smart pointer P3 and P4 are pointing to the
+    // object Addition to which they both maintain a reference of the object
 
     shared_ptr<Addition> P3(new Addition(3,4));
 
@@ -54,11 +59,11 @@ int main()
 
     // weak pointer
 
-    weak_ptr<Addition> P5(new Addition(5,6));
+    // Here both smart pointer P3 and P6 are pointing to the
+    // object Addition to which they both does not maintain a reference of the object
 
-    weak_ptr<Addition> P6(P5);
+    weak_ptr<Addition> P6(P3);
 
-
-    
+    cout<<"P4:: count"<<P4.use_count()<<endl;
 
 }
