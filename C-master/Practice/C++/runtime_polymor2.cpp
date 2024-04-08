@@ -9,6 +9,7 @@ class Base
 
     void input(int l)
     {
+        cout<<"base input"<<endl;
         a = l;
     }
 
@@ -36,8 +37,9 @@ class Derive : public Base
 
 int main()
 {
-    Base* obj1;
+    Base* obj1,Baseobj;
     Derive obj;
+    Baseobj.input(2);
     obj1 = &obj;
     // compile time poly
     obj.input(2);
