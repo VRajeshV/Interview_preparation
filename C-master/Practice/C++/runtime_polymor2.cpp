@@ -4,7 +4,7 @@ using namespace std;
 
 class Base
 {
-    int a;
+    int a=9;
     public:
 
     void input(int l)
@@ -28,7 +28,7 @@ class Derive : public Base
         a = l;
     }
 
-    void display()
+    void display() override
     {
         cout<<"Derive "<<a<<endl;
     }
@@ -36,15 +36,12 @@ class Derive : public Base
 
 int main()
 {
-    Derive obj;
-
     Base* obj1;
-
+    Derive obj;
     obj1 = &obj;
-
     // compile time poly
     obj.input(2);
-
     // runtime poly
     obj1->display();
+    obj1->Base::display();    
 }

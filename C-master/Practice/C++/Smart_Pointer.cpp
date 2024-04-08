@@ -16,6 +16,16 @@ class Addition
         b = m;
     }
 
+    Addition()
+    {
+        cout<<"constructor"<<endl;
+    }
+
+    ~Addition()
+    {
+        cout<<"detroyed"<<endl;
+    }
+
     int result()
     {
         return a+b;
@@ -31,6 +41,8 @@ int main()
     // But, then we remove P1 and assign P2 so the pointer now points to P2.
     
     unique_ptr<Addition> P1(new Addition(1,3));
+
+    unique_ptr<Addition> addtion = std::make_unique<Addition>();
     cout<< P1->result()<<endl;
 
     unique_ptr<Addition> P2;
@@ -65,5 +77,6 @@ int main()
     weak_ptr<Addition> P6(P3);
 
     cout<<"P4:: count"<<P4.use_count()<<endl;
+    cout<<"P6:: count"<<P6.use_count()<<endl;
 
 }
