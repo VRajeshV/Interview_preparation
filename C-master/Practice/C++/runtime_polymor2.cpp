@@ -26,6 +26,7 @@ class Derive : public Base
 
     void input(int l)
     {
+        cout<<"Derive input"<<endl;
         a = l;
     }
 
