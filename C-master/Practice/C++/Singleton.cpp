@@ -9,8 +9,12 @@ class Singleton
     private:
     static Singleton *Instance;
     int val = 0;
+    Singleton()
+    {
 
+    }
     public:
+    Singleton(const Singleton& obj) = delete;
     static Singleton *getInsatance()
     {
         lock_guard<mutex> lock(mutex_loc);
