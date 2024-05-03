@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "random": "c"
+        "random": "c",
+        "largest_num_array": "c"
     }
 }

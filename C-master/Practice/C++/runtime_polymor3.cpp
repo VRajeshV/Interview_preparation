@@ -3,9 +3,7 @@
 using namespace std; 
 
 class parent
-
 { 
-
 public: 
 
     virtual void print() 
@@ -15,9 +13,7 @@ public:
 }; 
 
 class child:public parent
-
 { 
-
 public: 
 
     void print() 
@@ -27,7 +23,6 @@ public:
 }; 
 
 int main()  
-
 { 
 
     parent *p; 
