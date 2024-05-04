@@ -78,5 +78,4 @@ int main()
 
     cout<<"P4:: count"<<P4.use_count()<<endl;
     cout<<"P6:: count"<<P6.use_count()<<endl;
-
 }
