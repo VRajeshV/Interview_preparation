@@ -5,7 +5,6 @@
 using namespace std;  
 
 int main()  
-
 {  
 
 vector <string> vec_1;  
