@@ -9,7 +9,6 @@ void reversestring(char* begin,char* end)
         *begin++ = *end;
         *end-- = temp;
     }
-
 }
 void reversewords(char *str)
 {
